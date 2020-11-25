@@ -17,3 +17,10 @@ def ajouteSymbole(grille, joueur):
             grille[3*i+j] = joueur
             choixIncorrect = "faux"
     return
+
+def testeVictoireVerticale(grille):
+    compteur = 0
+    while compteur < 3:
+        if grille[compteur] != " " and grille[compteur] == grille[compteur+3] and grille[compteur+6]:
+            return "vrai"
+    return "faux"
